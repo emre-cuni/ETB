@@ -42,12 +42,12 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelRegisterPassword = new System.Windows.Forms.Label();
             this.labelRegisterEmail = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelPhone = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelGender = new System.Windows.Forms.Label();
+            this.labelBirthDay = new System.Windows.Forms.Label();
+            this.labelPhoto = new System.Windows.Forms.Label();
+            this.labelCreditCard = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxRegisterMail = new System.Windows.Forms.TextBox();
@@ -134,8 +134,9 @@
             this.tabControl1.Location = new System.Drawing.Point(132, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(348, 535);
+            this.tabControl1.Size = new System.Drawing.Size(348, 299);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPageLogin
             // 
@@ -144,7 +145,7 @@
             this.tabPageLogin.Location = new System.Drawing.Point(4, 29);
             this.tabPageLogin.Name = "tabPageLogin";
             this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLogin.Size = new System.Drawing.Size(340, 502);
+            this.tabPageLogin.Size = new System.Drawing.Size(340, 266);
             this.tabPageLogin.TabIndex = 0;
             this.tabPageLogin.Text = "Giriş Yap";
             // 
@@ -155,12 +156,13 @@
             this.tabPageRegister.Location = new System.Drawing.Point(4, 29);
             this.tabPageRegister.Name = "tabPageRegister";
             this.tabPageRegister.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegister.Size = new System.Drawing.Size(340, 502);
+            this.tabPageRegister.Size = new System.Drawing.Size(340, 266);
             this.tabPageRegister.TabIndex = 1;
             this.tabPageRegister.Text = "Kayıt Ol";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.groupBox2.Controls.Add(this.buttonChoosePhoto);
             this.groupBox2.Controls.Add(this.maskedTextBoxCreditCard);
             this.groupBox2.Controls.Add(this.maskedTextBoxPhone);
@@ -172,17 +174,17 @@
             this.groupBox2.Controls.Add(this.textBoxRegisterMail);
             this.groupBox2.Controls.Add(this.textBoxSurname);
             this.groupBox2.Controls.Add(this.textBoxName);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.labelPhoto);
+            this.groupBox2.Controls.Add(this.labelCreditCard);
+            this.groupBox2.Controls.Add(this.labelPhone);
+            this.groupBox2.Controls.Add(this.labelAddress);
+            this.groupBox2.Controls.Add(this.labelGender);
+            this.groupBox2.Controls.Add(this.labelBirthDay);
             this.groupBox2.Controls.Add(this.labelRegisterPassword);
             this.groupBox2.Controls.Add(this.labelRegisterEmail);
             this.groupBox2.Controls.Add(this.labelSurname);
             this.groupBox2.Controls.Add(this.labelName);
-            this.groupBox2.Location = new System.Drawing.Point(4, 7);
+            this.groupBox2.Location = new System.Drawing.Point(4, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(330, 489);
             this.groupBox2.TabIndex = 0;
@@ -200,7 +202,7 @@
             // labelSurname
             // 
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(17, 71);
+            this.labelSurname.Location = new System.Drawing.Point(17, 79);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(63, 20);
             this.labelSurname.TabIndex = 1;
@@ -209,7 +211,7 @@
             // labelRegisterPassword
             // 
             this.labelRegisterPassword.AutoSize = true;
-            this.labelRegisterPassword.Location = new System.Drawing.Point(17, 141);
+            this.labelRegisterPassword.Location = new System.Drawing.Point(17, 165);
             this.labelRegisterPassword.Name = "labelRegisterPassword";
             this.labelRegisterPassword.Size = new System.Drawing.Size(53, 20);
             this.labelRegisterPassword.TabIndex = 3;
@@ -218,65 +220,65 @@
             // labelRegisterEmail
             // 
             this.labelRegisterEmail.AutoSize = true;
-            this.labelRegisterEmail.Location = new System.Drawing.Point(17, 106);
+            this.labelRegisterEmail.Location = new System.Drawing.Point(17, 122);
             this.labelRegisterEmail.Name = "labelRegisterEmail";
             this.labelRegisterEmail.Size = new System.Drawing.Size(55, 20);
             this.labelRegisterEmail.TabIndex = 2;
             this.labelRegisterEmail.Text = "E-Mail:";
             // 
-            // label5
+            // labelPhone
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 281);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "label5";
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Location = new System.Drawing.Point(17, 337);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(61, 20);
+            this.labelPhone.TabIndex = 7;
+            this.labelPhone.Text = "Telefon:";
             // 
-            // label6
+            // labelAddress
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(17, 294);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(50, 20);
+            this.labelAddress.TabIndex = 6;
+            this.labelAddress.Text = "Adres:";
             // 
-            // label7
+            // labelGender
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 211);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "label7";
+            this.labelGender.AutoSize = true;
+            this.labelGender.Location = new System.Drawing.Point(17, 251);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(63, 20);
+            this.labelGender.TabIndex = 5;
+            this.labelGender.Text = "Cinsiyet:";
             // 
-            // label8
+            // labelBirthDay
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 176);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "label8";
+            this.labelBirthDay.AutoSize = true;
+            this.labelBirthDay.Location = new System.Drawing.Point(17, 208);
+            this.labelBirthDay.Name = "labelBirthDay";
+            this.labelBirthDay.Size = new System.Drawing.Size(101, 20);
+            this.labelBirthDay.TabIndex = 4;
+            this.labelBirthDay.Text = "Doğum Tarihi:";
             // 
-            // label9
+            // labelPhoto
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 351);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "label9";
+            this.labelPhoto.AutoSize = true;
+            this.labelPhoto.Location = new System.Drawing.Point(17, 423);
+            this.labelPhoto.Name = "labelPhoto";
+            this.labelPhoto.Size = new System.Drawing.Size(69, 20);
+            this.labelPhoto.TabIndex = 9;
+            this.labelPhoto.Text = "Fotoğraf:";
             // 
-            // label10
+            // labelCreditCard
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 316);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 20);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "label10";
+            this.labelCreditCard.AutoSize = true;
+            this.labelCreditCard.Location = new System.Drawing.Point(17, 380);
+            this.labelCreditCard.Name = "labelCreditCard";
+            this.labelCreditCard.Size = new System.Drawing.Size(79, 20);
+            this.labelCreditCard.TabIndex = 8;
+            this.labelCreditCard.Text = "Kredi Kartı";
             // 
             // textBoxName
             // 
@@ -287,21 +289,21 @@
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(128, 69);
+            this.textBoxSurname.Location = new System.Drawing.Point(128, 78);
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(172, 27);
             this.textBoxSurname.TabIndex = 11;
             // 
             // textBoxRegisterMail
             // 
-            this.textBoxRegisterMail.Location = new System.Drawing.Point(128, 102);
+            this.textBoxRegisterMail.Location = new System.Drawing.Point(128, 120);
             this.textBoxRegisterMail.Name = "textBoxRegisterMail";
             this.textBoxRegisterMail.Size = new System.Drawing.Size(172, 27);
             this.textBoxRegisterMail.TabIndex = 12;
             // 
             // textBoxRegisterPassword
             // 
-            this.textBoxRegisterPassword.Location = new System.Drawing.Point(128, 135);
+            this.textBoxRegisterPassword.Location = new System.Drawing.Point(128, 162);
             this.textBoxRegisterPassword.Name = "textBoxRegisterPassword";
             this.textBoxRegisterPassword.PasswordChar = '*';
             this.textBoxRegisterPassword.Size = new System.Drawing.Size(172, 27);
@@ -309,14 +311,14 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(128, 234);
+            this.textBoxAddress.Location = new System.Drawing.Point(128, 285);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(172, 27);
             this.textBoxAddress.TabIndex = 16;
             // 
             // maskedTextBoxBirthDay
             // 
-            this.maskedTextBoxBirthDay.Location = new System.Drawing.Point(128, 168);
+            this.maskedTextBoxBirthDay.Location = new System.Drawing.Point(128, 204);
             this.maskedTextBoxBirthDay.Name = "maskedTextBoxBirthDay";
             this.maskedTextBoxBirthDay.Size = new System.Drawing.Size(172, 27);
             this.maskedTextBoxBirthDay.TabIndex = 19;
@@ -324,7 +326,7 @@
             // radioButtonMale
             // 
             this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Location = new System.Drawing.Point(128, 202);
+            this.radioButtonMale.Location = new System.Drawing.Point(128, 246);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(62, 24);
             this.radioButtonMale.TabIndex = 20;
@@ -335,7 +337,7 @@
             // radioButtonFemale
             // 
             this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Location = new System.Drawing.Point(235, 201);
+            this.radioButtonFemale.Location = new System.Drawing.Point(235, 246);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(65, 24);
             this.radioButtonFemale.TabIndex = 21;
@@ -345,7 +347,7 @@
             // 
             // maskedTextBoxPhone
             // 
-            this.maskedTextBoxPhone.Location = new System.Drawing.Point(128, 268);
+            this.maskedTextBoxPhone.Location = new System.Drawing.Point(128, 327);
             this.maskedTextBoxPhone.Mask = "(999) 000-0000";
             this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
             this.maskedTextBoxPhone.Size = new System.Drawing.Size(172, 27);
@@ -353,7 +355,7 @@
             // 
             // maskedTextBoxCreditCard
             // 
-            this.maskedTextBoxCreditCard.Location = new System.Drawing.Point(128, 301);
+            this.maskedTextBoxCreditCard.Location = new System.Drawing.Point(128, 369);
             this.maskedTextBoxCreditCard.Mask = "0000000000000000";
             this.maskedTextBoxCreditCard.Name = "maskedTextBoxCreditCard";
             this.maskedTextBoxCreditCard.Size = new System.Drawing.Size(172, 27);
@@ -364,7 +366,7 @@
             // 
             this.buttonChoosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.buttonChoosePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 335);
+            this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 411);
             this.buttonChoosePhoto.Name = "buttonChoosePhoto";
             this.buttonChoosePhoto.Size = new System.Drawing.Size(172, 40);
             this.buttonChoosePhoto.TabIndex = 24;
@@ -406,12 +408,12 @@
         private System.Windows.Forms.TabPage tabPageRegister;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelPhoto;
+        private System.Windows.Forms.Label labelCreditCard;
+        private System.Windows.Forms.Label labelPhone;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelBirthDay;
         private System.Windows.Forms.Label labelRegisterPassword;
         private System.Windows.Forms.Label labelRegisterEmail;
         private System.Windows.Forms.Label labelSurname;

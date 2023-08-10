@@ -1,1 +1,3 @@
-﻿
+﻿* Parola'yı şifreli kaydet veritabanına
+* Admin-admin ile giriş yapınca şifre değiştirme ekranına yönlendir
+* Login formunu tam ekran yap tabcontrol'ü de ekranın ortasına al
