@@ -17,6 +17,7 @@ namespace etb
         SqlCommand cmd;
         public DataSet dataSet = new DataSet();
         SqlDataAdapter sqlDataAdapter;
+        public Dictionary<string,string> customer = new Dictionary<string,string>();
         
 
         public bool SqlConn() // veritabanı bağlantısını açan metot
@@ -34,23 +35,73 @@ namespace etb
             }
         }
 
-        public void SqlGetCustomer(string command)
+        public void GetCustomer(string query)
         {
             try
             {
-                sqlDataAdapter = new SqlDataAdapter(new SqlCommand(command, conn));
+                sqlDataAdapter = new SqlDataAdapter(new SqlCommand(query, conn));
                 dataSet = new DataSet();
                 sqlDataAdapter.Fill(dataSet);
                 sqlDataAdapter.Dispose();
                 sqlDataAdapter = null;
+                conn.Close();
             }
             catch (Exception ex)
             {
                 sqlDataAdapter.Dispose();
                 sqlDataAdapter = null;
+                conn.Close();
                 MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace + " Olay Zamanı: " + DateTime.Now, "SQL Get Customer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        public void GetEmailAndPassword(string query)
+        {
+            SqlDataReader reader = null;
+            try
+            {
+                //sql bağlantısının olup olmadığını kontrol et
+                cmd = new SqlCommand(query, conn);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                    customer.Add(reader.GetString(3), reader.GetString(4));
+                    //customer.Append(reader.GetString(3) + "-" + reader.GetString(4));
+
+                cmd.Dispose();
+                cmd = null;
+                reader.Close();
+                reader = null;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                cmd.Dispose();
+                cmd = null;
+                reader.Close();
+                conn.Close();
+                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace + " Olay Zamanı: " + DateTime.Now, "SQL Read Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public bool WriteCustomer(string query)
+        {
+            try
+            {
+                cmd = new SqlCommand(query,conn);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                cmd = null;
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                cmd.Dispose();
+                cmd = null;
+                conn.Close();
+                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace + " Olay Zamanı: " + DateTime.Now, "SQL Write Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 }

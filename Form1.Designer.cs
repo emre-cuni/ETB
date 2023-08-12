@@ -38,27 +38,29 @@
             this.tabPageLogin = new System.Windows.Forms.TabPage();
             this.tabPageRegister = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelSurname = new System.Windows.Forms.Label();
-            this.labelRegisterPassword = new System.Windows.Forms.Label();
-            this.labelRegisterEmail = new System.Windows.Forms.Label();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.buttonChoosePhoto = new System.Windows.Forms.Button();
+            this.maskedTextBoxCreditCard = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.maskedTextBoxBirthDay = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxRegisterPassword = new System.Windows.Forms.TextBox();
+            this.textBoxRegisterMail = new System.Windows.Forms.TextBox();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.labelPhoto = new System.Windows.Forms.Label();
+            this.labelCreditCard = new System.Windows.Forms.Label();
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelGender = new System.Windows.Forms.Label();
             this.labelBirthDay = new System.Windows.Forms.Label();
-            this.labelPhoto = new System.Windows.Forms.Label();
-            this.labelCreditCard = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxSurname = new System.Windows.Forms.TextBox();
-            this.textBoxRegisterMail = new System.Windows.Forms.TextBox();
-            this.textBoxRegisterPassword = new System.Windows.Forms.TextBox();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxBirthDay = new System.Windows.Forms.MaskedTextBox();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxCreditCard = new System.Windows.Forms.MaskedTextBox();
-            this.buttonChoosePhoto = new System.Windows.Forms.Button();
+            this.labelRegisterPassword = new System.Windows.Forms.Label();
+            this.labelRegisterEmail = new System.Windows.Forms.Label();
+            this.labelSurname = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.openFileDialogChoosePhoto = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
@@ -134,7 +136,7 @@
             this.tabControl1.Location = new System.Drawing.Point(132, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(348, 299);
+            this.tabControl1.Size = new System.Drawing.Size(348, 565);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -145,7 +147,7 @@
             this.tabPageLogin.Location = new System.Drawing.Point(4, 29);
             this.tabPageLogin.Name = "tabPageLogin";
             this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLogin.Size = new System.Drawing.Size(340, 266);
+            this.tabPageLogin.Size = new System.Drawing.Size(340, 532);
             this.tabPageLogin.TabIndex = 0;
             this.tabPageLogin.Text = "Giriş Yap";
             // 
@@ -156,13 +158,14 @@
             this.tabPageRegister.Location = new System.Drawing.Point(4, 29);
             this.tabPageRegister.Name = "tabPageRegister";
             this.tabPageRegister.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegister.Size = new System.Drawing.Size(340, 266);
+            this.tabPageRegister.Size = new System.Drawing.Size(340, 532);
             this.tabPageRegister.TabIndex = 1;
             this.tabPageRegister.Text = "Kayıt Ol";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.groupBox2.Controls.Add(this.buttonRegister);
             this.groupBox2.Controls.Add(this.buttonChoosePhoto);
             this.groupBox2.Controls.Add(this.maskedTextBoxCreditCard);
             this.groupBox2.Controls.Add(this.maskedTextBoxPhone);
@@ -186,45 +189,143 @@
             this.groupBox2.Controls.Add(this.labelName);
             this.groupBox2.Location = new System.Drawing.Point(4, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(330, 489);
+            this.groupBox2.Size = new System.Drawing.Size(330, 523);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // labelName
+            // buttonRegister
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(17, 36);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(39, 20);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "İsim:";
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonRegister.Location = new System.Drawing.Point(21, 460);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(279, 53);
+            this.buttonRegister.TabIndex = 22;
+            this.buttonRegister.Text = "Kayıt Ol";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
-            // labelSurname
+            // buttonChoosePhoto
             // 
-            this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(17, 79);
-            this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(63, 20);
-            this.labelSurname.TabIndex = 1;
-            this.labelSurname.Text = "Soyisim:";
+            this.buttonChoosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonChoosePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 411);
+            this.buttonChoosePhoto.Name = "buttonChoosePhoto";
+            this.buttonChoosePhoto.Size = new System.Drawing.Size(172, 40);
+            this.buttonChoosePhoto.TabIndex = 21;
+            this.buttonChoosePhoto.Text = "Fotoğraf Seç";
+            this.buttonChoosePhoto.UseVisualStyleBackColor = false;
+            this.buttonChoosePhoto.Click += new System.EventHandler(this.buttonChoosePhoto_Click);
             // 
-            // labelRegisterPassword
+            // maskedTextBoxCreditCard
             // 
-            this.labelRegisterPassword.AutoSize = true;
-            this.labelRegisterPassword.Location = new System.Drawing.Point(17, 165);
-            this.labelRegisterPassword.Name = "labelRegisterPassword";
-            this.labelRegisterPassword.Size = new System.Drawing.Size(53, 20);
-            this.labelRegisterPassword.TabIndex = 3;
-            this.labelRegisterPassword.Text = "Parola:";
+            this.maskedTextBoxCreditCard.Location = new System.Drawing.Point(128, 369);
+            this.maskedTextBoxCreditCard.Mask = "0000000000000000";
+            this.maskedTextBoxCreditCard.Name = "maskedTextBoxCreditCard";
+            this.maskedTextBoxCreditCard.Size = new System.Drawing.Size(172, 27);
+            this.maskedTextBoxCreditCard.TabIndex = 20;
+            this.maskedTextBoxCreditCard.Text = "1234567890123456";
+            this.maskedTextBoxCreditCard.ValidatingType = typeof(int);
             // 
-            // labelRegisterEmail
+            // maskedTextBoxPhone
             // 
-            this.labelRegisterEmail.AutoSize = true;
-            this.labelRegisterEmail.Location = new System.Drawing.Point(17, 122);
-            this.labelRegisterEmail.Name = "labelRegisterEmail";
-            this.labelRegisterEmail.Size = new System.Drawing.Size(55, 20);
-            this.labelRegisterEmail.TabIndex = 2;
-            this.labelRegisterEmail.Text = "E-Mail:";
+            this.maskedTextBoxPhone.Location = new System.Drawing.Point(128, 327);
+            this.maskedTextBoxPhone.Mask = "(999) 000-0000";
+            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
+            this.maskedTextBoxPhone.Size = new System.Drawing.Size(172, 27);
+            this.maskedTextBoxPhone.TabIndex = 19;
+            this.maskedTextBoxPhone.Text = "5435911749";
+            // 
+            // radioButtonFemale
+            // 
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Location = new System.Drawing.Point(235, 246);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(65, 24);
+            this.radioButtonFemale.TabIndex = 17;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Kadın";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMale
+            // 
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Location = new System.Drawing.Point(128, 246);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(62, 24);
+            this.radioButtonMale.TabIndex = 16;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Erkek";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBoxBirthDay
+            // 
+            this.maskedTextBoxBirthDay.Location = new System.Drawing.Point(128, 204);
+            this.maskedTextBoxBirthDay.Mask = "00/00/0000";
+            this.maskedTextBoxBirthDay.Name = "maskedTextBoxBirthDay";
+            this.maskedTextBoxBirthDay.Size = new System.Drawing.Size(172, 27);
+            this.maskedTextBoxBirthDay.TabIndex = 15;
+            this.maskedTextBoxBirthDay.Text = "04012000";
+            this.maskedTextBoxBirthDay.ValidatingType = typeof(System.DateTime);
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(128, 285);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(172, 27);
+            this.textBoxAddress.TabIndex = 18;
+            this.textBoxAddress.Text = "Maraş";
+            // 
+            // textBoxRegisterPassword
+            // 
+            this.textBoxRegisterPassword.Location = new System.Drawing.Point(128, 162);
+            this.textBoxRegisterPassword.Name = "textBoxRegisterPassword";
+            this.textBoxRegisterPassword.PasswordChar = '*';
+            this.textBoxRegisterPassword.Size = new System.Drawing.Size(172, 27);
+            this.textBoxRegisterPassword.TabIndex = 14;
+            this.textBoxRegisterPassword.Text = "cranos";
+            // 
+            // textBoxRegisterMail
+            // 
+            this.textBoxRegisterMail.Location = new System.Drawing.Point(128, 120);
+            this.textBoxRegisterMail.Name = "textBoxRegisterMail";
+            this.textBoxRegisterMail.Size = new System.Drawing.Size(172, 27);
+            this.textBoxRegisterMail.TabIndex = 12;
+            this.textBoxRegisterMail.Text = "wtcranos@gmail.com";
+            // 
+            // textBoxSurname
+            // 
+            this.textBoxSurname.Location = new System.Drawing.Point(128, 78);
+            this.textBoxSurname.Name = "textBoxSurname";
+            this.textBoxSurname.Size = new System.Drawing.Size(172, 27);
+            this.textBoxSurname.TabIndex = 11;
+            this.textBoxSurname.Text = "Akı";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(128, 36);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(172, 27);
+            this.textBoxName.TabIndex = 10;
+            this.textBoxName.Text = "İbrahim";
+            // 
+            // labelPhoto
+            // 
+            this.labelPhoto.AutoSize = true;
+            this.labelPhoto.Location = new System.Drawing.Point(17, 423);
+            this.labelPhoto.Name = "labelPhoto";
+            this.labelPhoto.Size = new System.Drawing.Size(69, 20);
+            this.labelPhoto.TabIndex = 9;
+            this.labelPhoto.Text = "Fotoğraf:";
+            // 
+            // labelCreditCard
+            // 
+            this.labelCreditCard.AutoSize = true;
+            this.labelCreditCard.Location = new System.Drawing.Point(17, 380);
+            this.labelCreditCard.Name = "labelCreditCard";
+            this.labelCreditCard.Size = new System.Drawing.Size(79, 20);
+            this.labelCreditCard.TabIndex = 8;
+            this.labelCreditCard.Text = "Kredi Kartı";
             // 
             // labelPhone
             // 
@@ -262,116 +363,45 @@
             this.labelBirthDay.TabIndex = 4;
             this.labelBirthDay.Text = "Doğum Tarihi:";
             // 
-            // labelPhoto
+            // labelRegisterPassword
             // 
-            this.labelPhoto.AutoSize = true;
-            this.labelPhoto.Location = new System.Drawing.Point(17, 423);
-            this.labelPhoto.Name = "labelPhoto";
-            this.labelPhoto.Size = new System.Drawing.Size(69, 20);
-            this.labelPhoto.TabIndex = 9;
-            this.labelPhoto.Text = "Fotoğraf:";
+            this.labelRegisterPassword.AutoSize = true;
+            this.labelRegisterPassword.Location = new System.Drawing.Point(17, 165);
+            this.labelRegisterPassword.Name = "labelRegisterPassword";
+            this.labelRegisterPassword.Size = new System.Drawing.Size(53, 20);
+            this.labelRegisterPassword.TabIndex = 3;
+            this.labelRegisterPassword.Text = "Parola:";
             // 
-            // labelCreditCard
+            // labelRegisterEmail
             // 
-            this.labelCreditCard.AutoSize = true;
-            this.labelCreditCard.Location = new System.Drawing.Point(17, 380);
-            this.labelCreditCard.Name = "labelCreditCard";
-            this.labelCreditCard.Size = new System.Drawing.Size(79, 20);
-            this.labelCreditCard.TabIndex = 8;
-            this.labelCreditCard.Text = "Kredi Kartı";
+            this.labelRegisterEmail.AutoSize = true;
+            this.labelRegisterEmail.Location = new System.Drawing.Point(17, 122);
+            this.labelRegisterEmail.Name = "labelRegisterEmail";
+            this.labelRegisterEmail.Size = new System.Drawing.Size(55, 20);
+            this.labelRegisterEmail.TabIndex = 2;
+            this.labelRegisterEmail.Text = "E-Mail:";
             // 
-            // textBoxName
+            // labelSurname
             // 
-            this.textBoxName.Location = new System.Drawing.Point(128, 36);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(172, 27);
-            this.textBoxName.TabIndex = 10;
+            this.labelSurname.AutoSize = true;
+            this.labelSurname.Location = new System.Drawing.Point(17, 79);
+            this.labelSurname.Name = "labelSurname";
+            this.labelSurname.Size = new System.Drawing.Size(63, 20);
+            this.labelSurname.TabIndex = 1;
+            this.labelSurname.Text = "Soyisim:";
             // 
-            // textBoxSurname
+            // labelName
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(128, 78);
-            this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(172, 27);
-            this.textBoxSurname.TabIndex = 11;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(17, 36);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(39, 20);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "İsim:";
             // 
-            // textBoxRegisterMail
+            // openFileDialogChoosePhoto
             // 
-            this.textBoxRegisterMail.Location = new System.Drawing.Point(128, 120);
-            this.textBoxRegisterMail.Name = "textBoxRegisterMail";
-            this.textBoxRegisterMail.Size = new System.Drawing.Size(172, 27);
-            this.textBoxRegisterMail.TabIndex = 12;
-            // 
-            // textBoxRegisterPassword
-            // 
-            this.textBoxRegisterPassword.Location = new System.Drawing.Point(128, 162);
-            this.textBoxRegisterPassword.Name = "textBoxRegisterPassword";
-            this.textBoxRegisterPassword.PasswordChar = '*';
-            this.textBoxRegisterPassword.Size = new System.Drawing.Size(172, 27);
-            this.textBoxRegisterPassword.TabIndex = 14;
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Location = new System.Drawing.Point(128, 285);
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(172, 27);
-            this.textBoxAddress.TabIndex = 16;
-            // 
-            // maskedTextBoxBirthDay
-            // 
-            this.maskedTextBoxBirthDay.Location = new System.Drawing.Point(128, 204);
-            this.maskedTextBoxBirthDay.Name = "maskedTextBoxBirthDay";
-            this.maskedTextBoxBirthDay.Size = new System.Drawing.Size(172, 27);
-            this.maskedTextBoxBirthDay.TabIndex = 19;
-            // 
-            // radioButtonMale
-            // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Location = new System.Drawing.Point(128, 246);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(62, 24);
-            this.radioButtonMale.TabIndex = 20;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Erkek";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonFemale
-            // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Location = new System.Drawing.Point(235, 246);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(65, 24);
-            this.radioButtonFemale.TabIndex = 21;
-            this.radioButtonFemale.TabStop = true;
-            this.radioButtonFemale.Text = "Kadın";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBoxPhone
-            // 
-            this.maskedTextBoxPhone.Location = new System.Drawing.Point(128, 327);
-            this.maskedTextBoxPhone.Mask = "(999) 000-0000";
-            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
-            this.maskedTextBoxPhone.Size = new System.Drawing.Size(172, 27);
-            this.maskedTextBoxPhone.TabIndex = 22;
-            // 
-            // maskedTextBoxCreditCard
-            // 
-            this.maskedTextBoxCreditCard.Location = new System.Drawing.Point(128, 369);
-            this.maskedTextBoxCreditCard.Mask = "0000000000000000";
-            this.maskedTextBoxCreditCard.Name = "maskedTextBoxCreditCard";
-            this.maskedTextBoxCreditCard.Size = new System.Drawing.Size(172, 27);
-            this.maskedTextBoxCreditCard.TabIndex = 23;
-            this.maskedTextBoxCreditCard.ValidatingType = typeof(int);
-            // 
-            // buttonChoosePhoto
-            // 
-            this.buttonChoosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.buttonChoosePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 411);
-            this.buttonChoosePhoto.Name = "buttonChoosePhoto";
-            this.buttonChoosePhoto.Size = new System.Drawing.Size(172, 40);
-            this.buttonChoosePhoto.TabIndex = 24;
-            this.buttonChoosePhoto.Text = "Fotoğraf Seç";
-            this.buttonChoosePhoto.UseVisualStyleBackColor = false;
+            this.openFileDialogChoosePhoto.FileName = "openFileDialogChoosePhoto";
             // 
             // FormLogin
             // 
@@ -428,6 +458,8 @@
         private System.Windows.Forms.Button buttonChoosePhoto;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCreditCard;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPhone;
+        private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.OpenFileDialog openFileDialogChoosePhoto;
     }
 }
 

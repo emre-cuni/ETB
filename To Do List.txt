@@ -1,3 +1,8 @@
 ﻿* Parola'yı şifreli kaydet veritabanına
 * Admin-admin ile giriş yapınca şifre değiştirme ekranına yönlendir
 * Login formunu tam ekran yap tabcontrol'ü de ekranın ortasına al
+* Kullanıcı eklerken doğrulama kodu gönder
+* Her mail için tek kayıt olmasını sağla
+* Fotolara email adını ver
+* Giriş yaptıktan sonra hesap ayarları ve çıkış yap sekmesi ekle(anasayfaya)
+* Fotoğraf eklemede aynı fotoğrafın olup olmadığını kontrol et
