@@ -5,5 +5,8 @@
 * Her mail için tek kayıt olmasını sağla
 * Fotolara email adını ver
 * Giriş yaptıktan sonra hesap ayarları ve çıkış yap sekmesi ekle(anasayfaya)
-* Fotoğraf eklemede aynı fotoğrafın olup olmadığını kontrol et
+XX Fotoğraf eklemede aynı fotoğrafın olup olmadığını kontrol et XX
 * Veri tabanını 64 karakterlik yeniden tanımla
+* Şifrenin max 20 karakter olacağına dair tooltip ver
+XX Kayıt Ol'da foto seçilip seçilmediğini kontrol et XX
+XX Fotoğraf seçildikten sonra köşede ufak olarak resim görünsün XX

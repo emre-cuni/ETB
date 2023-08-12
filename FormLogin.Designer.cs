@@ -61,16 +61,18 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.openFileDialogChoosePhoto = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.groupBox1.Controls.Add(this.buttonLogin);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxEmail);
@@ -86,7 +88,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonLogin.Location = new System.Drawing.Point(39, 174);
             this.buttonLogin.Name = "buttonLogin";
@@ -99,6 +101,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(109, 117);
+            this.textBoxPassword.MaxLength = 20;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(172, 27);
@@ -164,7 +167,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.buttonRegister);
             this.groupBox2.Controls.Add(this.buttonChoosePhoto);
             this.groupBox2.Controls.Add(this.maskedTextBoxCreditCard);
@@ -195,8 +199,8 @@
             // 
             // buttonRegister
             // 
-            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.buttonRegister.Location = new System.Drawing.Point(21, 460);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(279, 53);
@@ -211,7 +215,7 @@
             this.buttonChoosePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 411);
             this.buttonChoosePhoto.Name = "buttonChoosePhoto";
-            this.buttonChoosePhoto.Size = new System.Drawing.Size(172, 40);
+            this.buttonChoosePhoto.Size = new System.Drawing.Size(129, 40);
             this.buttonChoosePhoto.TabIndex = 21;
             this.buttonChoosePhoto.Text = "Fotoğraf Seç";
             this.buttonChoosePhoto.UseVisualStyleBackColor = false;
@@ -279,6 +283,7 @@
             // textBoxRegisterPassword
             // 
             this.textBoxRegisterPassword.Location = new System.Drawing.Point(128, 162);
+            this.textBoxRegisterPassword.MaxLength = 20;
             this.textBoxRegisterPassword.Name = "textBoxRegisterPassword";
             this.textBoxRegisterPassword.PasswordChar = '*';
             this.textBoxRegisterPassword.Size = new System.Drawing.Size(172, 27);
@@ -323,9 +328,9 @@
             this.labelCreditCard.AutoSize = true;
             this.labelCreditCard.Location = new System.Drawing.Point(17, 380);
             this.labelCreditCard.Name = "labelCreditCard";
-            this.labelCreditCard.Size = new System.Drawing.Size(79, 20);
+            this.labelCreditCard.Size = new System.Drawing.Size(82, 20);
             this.labelCreditCard.TabIndex = 8;
-            this.labelCreditCard.Text = "Kredi Kartı";
+            this.labelCreditCard.Text = "Kredi Kartı:";
             // 
             // labelPhone
             // 
@@ -403,6 +408,15 @@
             // 
             this.openFileDialogChoosePhoto.FileName = "openFileDialogChoosePhoto";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(263, 411);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -421,6 +435,7 @@
             this.tabPageRegister.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,6 +475,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPhone;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.OpenFileDialog openFileDialogChoosePhoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -33,9 +33,12 @@ namespace etb
         DateTime birthday;
         StringBuilder fileExtension = new StringBuilder();
         StringBuilder photoPath = new StringBuilder();
-        bool photoControl, gender;
+        bool photoControl;
         string temp;
-
+        FormMain formMain;
+        FormResetPassword formResetPassword;
+        Encryption encryption = new Encryption();
+        byte[] encryptedPassword;
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -53,10 +56,24 @@ namespace etb
 
                         if (sqlOperations.customer.ContainsKey(email.ToString())) // girilen email'in veritabanında kayıtlı olup olmadığı kontrol edilir
                         {
-                            if (sqlOperations.customer[email.ToString()] == password.ToString()) // girilen mail ile girilen parolanın eşleşip eşleşmediği kontrol edilir
+                            // kullanıcın girdiği parola şifrelenir
+                            encryptedPassword = encryption.Encrypt(password.ToString());
+                            password.Clear();
+                            password.Append(Convert.ToBase64String(encryptedPassword));
+
+                            if (sqlOperations.customer[email.ToString()] == password.ToString()) // girilen mail ile girilen şifreli parolanın eşleşip eşleşmediği kontrol edilir
                             {
                                 MessageBox.Show($"Hoşgeldiniz {email}", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                                if (email.ToString() == "admin@admin.com" && password.ToString() == "sART4lDsPTTqPB/ZRfKUdg==") // girilen parola 'admin' ise parola sıfırlama ekranına yönlendirir
+                                {
+                                    formResetPassword = new FormResetPassword(email.ToString());
+                                    Hide();
+                                    formResetPassword.ShowDialog();
+                                }
+                                formMain = new FormMain();
+                                Hide();
+                                formMain.ShowDialog();
+                                ShowDialog();
                             }
                             else
                                 MessageBox.Show("Bilgilerini Kontrol Ediniz", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -99,18 +116,24 @@ namespace etb
             try
             {
                 if (textBoxName.Text != string.Empty && textBoxSurname.Text != string.Empty && textBoxRegisterMail.Text != string.Empty && textBoxRegisterPassword.Text != string.Empty && textBoxAddress.Text != string.Empty && maskedTextBoxBirthDay.Text != string.Empty
-                    && maskedTextBoxCreditCard.Text != string.Empty && maskedTextBoxPhone.Text != string.Empty && (radioButtonFemale.Checked || radioButtonMale.Checked))
+                    && maskedTextBoxCreditCard.Text != string.Empty && maskedTextBoxPhone.Text != string.Empty && (radioButtonFemale.Checked || radioButtonMale.Checked) && photoControl)
                 {
+                    photoControl = false;
                     name.Append(textBoxName.Text);
                     surname.Append(textBoxSurname.Text);
                     registerEmail.Append(textBoxRegisterMail.Text);
                     registerPassword.Append(textBoxRegisterPassword.Text);
                     address.Append(textBoxAddress.Text);
-                    birthday = DateTime.ParseExact(maskedTextBoxBirthDay.Text,"dd.MM.yyyy", CultureInfo.InvariantCulture);
+                    birthday = DateTime.ParseExact(maskedTextBoxBirthDay.Text, "dd.MM.yyyy", CultureInfo.InvariantCulture);
                     creditCard.Append(maskedTextBoxCreditCard.Text);
                     temp = maskedTextBoxPhone.Text;
                     temp = temp.Substring(1, 3) + temp.Substring(6, 3) + temp.Substring(10);
                     phone.Append(temp);
+
+                    // parola şifrelenir
+                    encryptedPassword = encryption.Encrypt(registerPassword.ToString());
+                    registerPassword.Clear();
+                    registerPassword.Append(Convert.ToBase64String(encryptedPassword));
 
                     query.Append("INSERT INTO Table_Customer (name, surname, email, password, birthday, [authorization], gender, address, phone, creditCard, photoPath) " +
                         $"VALUES('{name}', '{surname}', '{registerEmail}' , '{registerPassword}', '{maskedTextBoxBirthDay.Text}', 0, ");
@@ -128,6 +151,8 @@ namespace etb
                             MessageBox.Show("İşlem Sırasında Bir Hata Oluştu.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+                else
+                    MessageBox.Show("Boş Alanları Doldurunuz!","UYARI",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -163,6 +188,8 @@ namespace etb
                             }
                         }
                         File.Copy(openFileDialogChoosePhoto.FileName, photoPath.ToString()); // seçilen dosya yazılımın kurulu olduğu dizine kopyalanır
+                        pictureBox1.Image = Image.FromFile(photoPath.ToString());
+                        photoControl = true;
                         photoPath.Clear();
                         photoPath.Append("photos\\" + name + "_" + surname + fileExtension);
                     finish:
@@ -177,33 +204,5 @@ namespace etb
                 MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace, "Choose Photo Error");
             }
         }
-
-
-
-        //private void FormLogin_Load(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        string photoPath;
-        //        sqlOperations.SqlConn();
-        //        sqlOperations.SqlGetCustomer("Select * From Table_Customer");
-        //        for (int i = 0; i < sqlOperations.dataSet.Tables[0].Rows.Count; i++)
-        //        {
-        //            photoPath = sqlOperations.dataSet.Tables[0].Rows[i]["photoPath"].ToString();
-        //            pictureBox1.Image = Image.FromFile(Application.StartupPath + "\\" + photoPath);
-        //            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace, "Tab Change Error");
-        //    }
-        //}
     }
 }
