@@ -1,12 +1,12 @@
-﻿* Parola'yı şifreli kaydet veritabanına
-* Admin-admin ile giriş yapınca şifre değiştirme ekranına yönlendir
+﻿XX Parola'yı şifreli kaydet veritabanına XX
+XX Admin-admin ile giriş yapınca şifre değiştirme ekranına yönlendir XX
 * Login formunu tam ekran yap tabcontrol'ü de ekranın ortasına al
 * Kullanıcı eklerken doğrulama kodu gönder
 * Her mail için tek kayıt olmasını sağla
 * Fotolara email adını ver
 * Giriş yaptıktan sonra hesap ayarları ve çıkış yap sekmesi ekle(anasayfaya)
 XX Fotoğraf eklemede aynı fotoğrafın olup olmadığını kontrol et XX
-* Veri tabanını 64 karakterlik yeniden tanımla
+XX Veri tabanını 64 karakterlik yeniden tanımla XX
 * Şifrenin max 20 karakter olacağına dair tooltip ver
 XX Kayıt Ol'da foto seçilip seçilmediğini kontrol et XX
 XX Fotoğraf seçildikten sonra köşede ufak olarak resim görünsün XX
