@@ -36,7 +36,7 @@ namespace etb
                     Array.Copy(aesAlg.IV, encryptedByte, aesAlg.IV.Length);
                     Array.Copy(msEncrypt.ToArray(), 0, encryptedByte, aesAlg.IV.Length, msEncrypt.ToArray().Length);
 
-                    return Convert.ToBase64String(encryptedByte); // Byte dizisini Base64 formatında döndür
+                    return Convert.ToString(encryptedByte); // Byte dizisini string'e çevirir ve döndürür
                 }
             }
         }
@@ -55,13 +55,13 @@ namespace etb
                 aesAlg.IV = iv;
 
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-                using (MemoryStream msDecrypt = new MemoryStream(encrypted)) // Şifrelenmiş veriyi bellek akışına yükle
+                using (MemoryStream msDecrypt = new MemoryStream(encrypted)) // Şifrelenmiş veriyi memorystream nesnesine yükler
                 {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read)) // CryptoStream oluştur ve çöz
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read)) // CryptoStream oluşturur ve çözer
                     {
                         using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                         {
-                            return srDecrypt.ReadToEnd(); // Çözülen veriyi oku ve döndür
+                            return srDecrypt.ReadToEnd(); // Çözülen veriyi okur ve döndürür
                         }
                     }
                 }
