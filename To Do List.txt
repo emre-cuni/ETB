@@ -10,3 +10,4 @@ XX Veri tabanını 64 karakterlik yeniden tanımla XX
 * Şifrenin max 20 karakter olacağına dair tooltip ver
 XX Kayıt Ol'da foto seçilip seçilmediğini kontrol et XX
 XX Fotoğraf seçildikten sonra köşede ufak olarak resim görünsün XX
+* Admin giriş yaptığında değişiklik hakkı olsun veya kullanıcı kendi bilgilerinde değişiklik yapabilsin

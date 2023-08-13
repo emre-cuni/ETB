@@ -38,6 +38,7 @@
             this.tabPageLogin = new System.Windows.Forms.TabPage();
             this.tabPageRegister = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.buttonChoosePhoto = new System.Windows.Forms.Button();
             this.maskedTextBoxCreditCard = new System.Windows.Forms.MaskedTextBox();
@@ -61,7 +62,6 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.openFileDialogChoosePhoto = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
@@ -106,6 +106,7 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(172, 27);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Text = "123456";
             // 
             // textBoxEmail
             // 
@@ -113,6 +114,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(172, 27);
             this.textBoxEmail.TabIndex = 2;
+            this.textBoxEmail.Text = "cuniiemre@gmail.com";
             // 
             // labelPassword
             // 
@@ -196,6 +198,15 @@
             this.groupBox2.Size = new System.Drawing.Size(330, 523);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(263, 411);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonRegister
             // 
@@ -407,15 +418,6 @@
             // openFileDialogChoosePhoto
             // 
             this.openFileDialogChoosePhoto.FileName = "openFileDialogChoosePhoto";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(263, 411);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
