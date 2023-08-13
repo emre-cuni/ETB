@@ -12,7 +12,7 @@ namespace etb
 {
     public partial class FormDetails : Form
     {
-        public FormDetails(string _name,string _surname, string _email, string _birthday, string _phone, string _addres, string creditCard, bool _gender)
+        public FormDetails(string _name,string _surname, string _email, string _birthday, string _phone, string _addres, string creditCard,string _photoPath , bool _gender)
         {
             InitializeComponent();
         }
@@ -24,6 +24,7 @@ namespace etb
         StringBuilder phone = new StringBuilder();
         StringBuilder address = new StringBuilder();
         StringBuilder creditCard = new StringBuilder();
+        StringBuilder photoPath = new StringBuilder();
         bool gender;
 
         private void FormDetails_Load(object sender, EventArgs e)
