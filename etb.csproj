@@ -47,11 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encryption.cs" />
-    <Compile Include="etbCustomerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>etbCustomerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,17 +104,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="etbCustomerDataSet.xsc">
-      <DependentUpon>etbCustomerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="etbCustomerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>etbCustomerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="etbCustomerDataSet.xss">
-      <DependentUpon>etbCustomerDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
