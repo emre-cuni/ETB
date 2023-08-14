@@ -1,5 +1,3 @@
-# ETB Case
-
 # Bu proje C# .Net ile geliştirilmiş bir Windows Form Uygulamasıdır. Veri tabanı olarak MSSQL kullanılmıştır.
 
 # Projede yapılabilen fonksiyonlar:
