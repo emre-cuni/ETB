@@ -121,7 +121,7 @@ namespace etb
                 if (tabControl1.SelectedIndex == 0) // giriş yap seçilirse tab control'ün boyutu küçültülür
                 {
                     Text = "Giriş Yap";
-                    tabControl1.Size = new Size(348, 302);
+                    tabControl1.Size = new Size(348, 302);                    
                 }
                 else // kayıt ol seçilirse tab control'ün boyutu büyültülür
                 {
@@ -142,6 +142,11 @@ namespace etb
                 if (textBoxName.Text != string.Empty && textBoxSurname.Text != string.Empty && textBoxRegisterMail.Text != string.Empty && textBoxRegisterPassword.Text != string.Empty && textBoxAddress.Text != string.Empty && maskedTextBoxBirthDay.Text != string.Empty
                     && maskedTextBoxCreditCard.Text != string.Empty && maskedTextBoxPhone.Text != string.Empty && (radioButtonFemale.Checked || radioButtonMale.Checked) && photoControl)
                 {
+                    if(textBoxPassword.Text.Length < 4) // parolanın en az 4 karakter olmasını kontrol eder
+                    {
+                        MessageBox.Show("Parolanız En Az 4 Karakter İçermelidir.","BİLGİ",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        goto finish;
+                    }
                     // kullanıcıdan müşteri bilgileri alınır
                     photoControl = false;
                     name.Append(textBoxName.Text);
@@ -276,7 +281,7 @@ namespace etb
             {
                 // parola için karakter limiti bilgisi verilir
                 ToolTip toolTip = new ToolTip();
-                toolTip.SetToolTip(textBoxRegisterPassword, "Parola Maksimum 20 Karakter Olmalıdır!");
+                toolTip.SetToolTip(textBoxRegisterPassword, "Parola Minimum 4 Maksimum 20 Karakter Olmalıdır!");
 
                 query.Clear();
                 if (sqlOperations.SqlConn()) // sql bağlantısı açılır başarılıyla açılırsa "SqlConn" metodu true değer döndürür
