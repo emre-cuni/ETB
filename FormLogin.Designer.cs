@@ -221,7 +221,7 @@
             // 
             // buttonChoosePhoto
             // 
-            this.buttonChoosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.buttonChoosePhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChoosePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonChoosePhoto.Location = new System.Drawing.Point(128, 411);
             this.buttonChoosePhoto.Name = "buttonChoosePhoto";
