@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace etb
 {
@@ -15,47 +16,33 @@ namespace etb
 
         public byte[] Encrypt(string plainText) // parametre aldığı metni şifreleyen metot
         {
-            using (Aes aesAlg = Aes.Create())
+            try
             {
-                aesAlg.Key = key;
-                aesAlg.IV = iv;
-
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-                using (MemoryStream msEncrypt = new MemoryStream())
+                using (Aes aesAlg = Aes.Create())
                 {
-                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    aesAlg.Key = key;
+                    aesAlg.IV = iv;
+
+                    ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                    using (MemoryStream msEncrypt = new MemoryStream())
                     {
-                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                         {
-                            swEncrypt.Write(plainText);
+                            using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                            {
+                                swEncrypt.Write(plainText);
+                            }
                         }
+                        return msEncrypt.ToArray();
                     }
-                    return msEncrypt.ToArray();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace, "Encryption Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
-
-        //public string Decrypt(byte[] cipherText) // şifreli verinin şifresini çözen metot
-        //{
-        //    using (Aes aesAlg = Aes.Create())
-        //    {
-        //        aesAlg.Key = key;
-        //        aesAlg.IV = iv;
-
-        //        ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-        //        using (MemoryStream msDecrypt = new MemoryStream(cipherText))
-        //        {
-        //            using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-        //            {
-        //                using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-        //                {
-        //                    return srDecrypt.ReadToEnd();
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
     }
 }

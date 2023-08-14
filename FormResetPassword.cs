@@ -42,7 +42,7 @@ namespace etb
                     query.Append($"UPDATE Table_Customer SET password = '{password}' WHERE email = '{email}'");
                     if (sqlOperations.SqlConn()) // sql bağlantısı açılır
                     {
-                        if (sqlOperations.ResetPassword(query.ToString())) // parola güncellenir
+                        if (sqlOperations.AddOrUpdate(query.ToString())) // parola güncellenir
                             MessageBox.Show("Parola Başarıyla Sıfırlandı.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
                             MessageBox.Show("Bir Hata Oluştu.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);

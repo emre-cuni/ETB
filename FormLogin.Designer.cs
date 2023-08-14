@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.buttonLogin);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxEmail);
@@ -88,7 +89,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonLogin.Location = new System.Drawing.Point(39, 174);
             this.buttonLogin.Name = "buttonLogin";
@@ -106,7 +107,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(172, 27);
             this.textBoxPassword.TabIndex = 3;
-            this.textBoxPassword.Text = "123456";
             // 
             // textBoxEmail
             // 
@@ -114,7 +114,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(172, 27);
             this.textBoxEmail.TabIndex = 2;
-            this.textBoxEmail.Text = "cuniiemre@gmail.com";
             // 
             // labelPassword
             // 
@@ -138,38 +137,38 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageLogin);
             this.tabControl1.Controls.Add(this.tabPageRegister);
-            this.tabControl1.Location = new System.Drawing.Point(132, 36);
+            this.tabControl1.Location = new System.Drawing.Point(52, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(348, 565);
+            this.tabControl1.Size = new System.Drawing.Size(348, 300);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPageLogin
             // 
-            this.tabPageLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.tabPageLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tabPageLogin.Controls.Add(this.groupBox1);
             this.tabPageLogin.Location = new System.Drawing.Point(4, 29);
             this.tabPageLogin.Name = "tabPageLogin";
             this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLogin.Size = new System.Drawing.Size(340, 532);
+            this.tabPageLogin.Size = new System.Drawing.Size(340, 267);
             this.tabPageLogin.TabIndex = 0;
             this.tabPageLogin.Text = "Giriş Yap";
             // 
             // tabPageRegister
             // 
-            this.tabPageRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.tabPageRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tabPageRegister.Controls.Add(this.groupBox2);
             this.tabPageRegister.Location = new System.Drawing.Point(4, 29);
             this.tabPageRegister.Name = "tabPageRegister";
             this.tabPageRegister.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegister.Size = new System.Drawing.Size(340, 532);
+            this.tabPageRegister.Size = new System.Drawing.Size(340, 267);
             this.tabPageRegister.TabIndex = 1;
             this.tabPageRegister.Text = "Kayıt Ol";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.buttonRegister);
             this.groupBox2.Controls.Add(this.buttonChoosePhoto);
@@ -210,7 +209,7 @@
             // 
             // buttonRegister
             // 
-            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.buttonRegister.Location = new System.Drawing.Point(21, 460);
             this.buttonRegister.Name = "buttonRegister";
@@ -239,7 +238,6 @@
             this.maskedTextBoxCreditCard.Name = "maskedTextBoxCreditCard";
             this.maskedTextBoxCreditCard.Size = new System.Drawing.Size(172, 27);
             this.maskedTextBoxCreditCard.TabIndex = 20;
-            this.maskedTextBoxCreditCard.Text = "1234567890123456";
             this.maskedTextBoxCreditCard.ValidatingType = typeof(int);
             // 
             // maskedTextBoxPhone
@@ -249,7 +247,6 @@
             this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
             this.maskedTextBoxPhone.Size = new System.Drawing.Size(172, 27);
             this.maskedTextBoxPhone.TabIndex = 19;
-            this.maskedTextBoxPhone.Text = "5435911749";
             // 
             // radioButtonFemale
             // 
@@ -280,7 +277,6 @@
             this.maskedTextBoxBirthDay.Name = "maskedTextBoxBirthDay";
             this.maskedTextBoxBirthDay.Size = new System.Drawing.Size(172, 27);
             this.maskedTextBoxBirthDay.TabIndex = 15;
-            this.maskedTextBoxBirthDay.Text = "04012000";
             this.maskedTextBoxBirthDay.ValidatingType = typeof(System.DateTime);
             // 
             // textBoxAddress
@@ -289,7 +285,6 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(172, 27);
             this.textBoxAddress.TabIndex = 18;
-            this.textBoxAddress.Text = "Maraş";
             // 
             // textBoxRegisterPassword
             // 
@@ -299,7 +294,6 @@
             this.textBoxRegisterPassword.PasswordChar = '*';
             this.textBoxRegisterPassword.Size = new System.Drawing.Size(172, 27);
             this.textBoxRegisterPassword.TabIndex = 14;
-            this.textBoxRegisterPassword.Text = "cranos";
             // 
             // textBoxRegisterMail
             // 
@@ -307,7 +301,6 @@
             this.textBoxRegisterMail.Name = "textBoxRegisterMail";
             this.textBoxRegisterMail.Size = new System.Drawing.Size(172, 27);
             this.textBoxRegisterMail.TabIndex = 12;
-            this.textBoxRegisterMail.Text = "wtcranos@gmail.com";
             // 
             // textBoxSurname
             // 
@@ -315,7 +308,6 @@
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(172, 27);
             this.textBoxSurname.TabIndex = 11;
-            this.textBoxSurname.Text = "Akı";
             // 
             // textBoxName
             // 
@@ -323,7 +315,6 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(172, 27);
             this.textBoxName.TabIndex = 10;
-            this.textBoxName.Text = "İbrahim";
             // 
             // labelPhoto
             // 
@@ -423,13 +414,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(670, 626);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(458, 411);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Giriş Yap";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

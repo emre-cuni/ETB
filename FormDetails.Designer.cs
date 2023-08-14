@@ -28,38 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetails));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonCustomer = new System.Windows.Forms.RadioButton();
+            this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
+            this.labelAuthorization = new System.Windows.Forms.Label();
+            this.labelCreditCard = new System.Windows.Forms.Label();
+            this.labelPhone = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelGender = new System.Windows.Forms.Label();
+            this.labelBirthday = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelSurname = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelExit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.radioButtonCustomer);
+            this.panel1.Controls.Add(this.radioButtonAdmin);
+            this.panel1.Controls.Add(this.labelAuthorization);
+            this.panel1.Controls.Add(this.labelCreditCard);
+            this.panel1.Controls.Add(this.labelPhone);
+            this.panel1.Controls.Add(this.labelAddress);
+            this.panel1.Controls.Add(this.labelGender);
+            this.panel1.Controls.Add(this.labelBirthday);
+            this.panel1.Controls.Add(this.labelEmail);
+            this.panel1.Controls.Add(this.labelSurname);
+            this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.pictureBoxPhoto);
             this.panel1.Location = new System.Drawing.Point(27, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 300);
+            this.panel1.Size = new System.Drawing.Size(664, 329);
             this.panel1.TabIndex = 0;
             this.panel1.DoubleClick += new System.EventHandler(this.FormDetails_DoubleClick);
+            // 
+            // radioButtonCustomer
+            // 
+            this.radioButtonCustomer.AutoSize = true;
+            this.radioButtonCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonCustomer.Location = new System.Drawing.Point(403, 288);
+            this.radioButtonCustomer.Name = "radioButtonCustomer";
+            this.radioButtonCustomer.Size = new System.Drawing.Size(79, 24);
+            this.radioButtonCustomer.TabIndex = 11;
+            this.radioButtonCustomer.TabStop = true;
+            this.radioButtonCustomer.Text = "Müşteri";
+            this.radioButtonCustomer.UseVisualStyleBackColor = true;
+            this.radioButtonCustomer.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // radioButtonAdmin
+            // 
+            this.radioButtonAdmin.AutoSize = true;
+            this.radioButtonAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonAdmin.Location = new System.Drawing.Point(318, 288);
+            this.radioButtonAdmin.Name = "radioButtonAdmin";
+            this.radioButtonAdmin.Size = new System.Drawing.Size(81, 24);
+            this.radioButtonAdmin.TabIndex = 10;
+            this.radioButtonAdmin.TabStop = true;
+            this.radioButtonAdmin.Text = "Yönetici";
+            this.radioButtonAdmin.UseVisualStyleBackColor = true;
+            this.radioButtonAdmin.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // labelAuthorization
+            // 
+            this.labelAuthorization.AutoSize = true;
+            this.labelAuthorization.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAuthorization.Location = new System.Drawing.Point(269, 290);
+            this.labelAuthorization.Name = "labelAuthorization";
+            this.labelAuthorization.Size = new System.Drawing.Size(46, 20);
+            this.labelAuthorization.TabIndex = 9;
+            this.labelAuthorization.Text = "Yetki:";
+            // 
+            // labelCreditCard
+            // 
+            this.labelCreditCard.AutoSize = true;
+            this.labelCreditCard.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelCreditCard.Location = new System.Drawing.Point(230, 256);
+            this.labelCreditCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCreditCard.Name = "labelCreditCard";
+            this.labelCreditCard.Size = new System.Drawing.Size(85, 20);
+            this.labelCreditCard.TabIndex = 8;
+            this.labelCreditCard.Text = "Kredi Kartı:";
+            // 
+            // labelPhone
+            // 
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelPhone.Location = new System.Drawing.Point(252, 222);
+            this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(63, 20);
+            this.labelPhone.TabIndex = 7;
+            this.labelPhone.Text = "Telefon:";
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAddress.Location = new System.Drawing.Point(263, 188);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(52, 20);
+            this.labelAddress.TabIndex = 6;
+            this.labelAddress.Text = "Adres:";
+            // 
+            // labelGender
+            // 
+            this.labelGender.AutoSize = true;
+            this.labelGender.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelGender.Location = new System.Drawing.Point(249, 154);
+            this.labelGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(66, 20);
+            this.labelGender.TabIndex = 5;
+            this.labelGender.Text = "Cinsiyet:";
+            // 
+            // labelBirthday
+            // 
+            this.labelBirthday.AutoSize = true;
+            this.labelBirthday.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelBirthday.Location = new System.Drawing.Point(209, 120);
+            this.labelBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBirthday.Name = "labelBirthday";
+            this.labelBirthday.Size = new System.Drawing.Size(106, 20);
+            this.labelBirthday.TabIndex = 4;
+            this.labelBirthday.Text = "Doğum Tarihi:";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelEmail.Location = new System.Drawing.Point(258, 86);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(57, 20);
+            this.labelEmail.TabIndex = 3;
+            this.labelEmail.Text = "E-Mail:";
+            // 
+            // labelSurname
+            // 
+            this.labelSurname.AutoSize = true;
+            this.labelSurname.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelSurname.Location = new System.Drawing.Point(256, 52);
+            this.labelSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSurname.Name = "labelSurname";
+            this.labelSurname.Size = new System.Drawing.Size(59, 20);
+            this.labelSurname.TabIndex = 2;
+            this.labelSurname.Text = "Soyadı:";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelName.Location = new System.Drawing.Point(279, 18);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(36, 20);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Adı:";
             // 
             // pictureBoxPhoto
             // 
@@ -67,115 +198,39 @@
             this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxPhoto.Name = "pictureBoxPhoto";
             this.pictureBoxPhoto.Size = new System.Drawing.Size(157, 194);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPhoto.TabIndex = 0;
             this.pictureBoxPhoto.TabStop = false;
             // 
-            // label1
+            // labelExit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Adı:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Soyadı:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(256, 86);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "E-Mail:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(210, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Doğum Tarihi:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(248, 154);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Cinsiyet:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(261, 188);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Adres:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(250, 222);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Telefon:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(229, 256);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Kredi Kartı:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(515, 339);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "(Çıkmak İçin Çift Tıklayın)";
+            this.labelExit.AutoSize = true;
+            this.labelExit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelExit.ForeColor = System.Drawing.Color.Silver;
+            this.labelExit.Location = new System.Drawing.Point(515, 358);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(176, 20);
+            this.labelExit.TabIndex = 1;
+            this.labelExit.Text = "(Çıkmak İçin Çift Tıklayın)";
+            this.labelExit.DoubleClick += new System.EventHandler(this.FormDetails_DoubleClick);
             // 
             // FormDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(723, 368);
+            this.ClientSize = new System.Drawing.Size(723, 387);
             this.ControlBox = false;
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelExit);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormDetails";
-            this.Text = "FormDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Müşteri Detayları";
             this.Load += new System.EventHandler(this.FormDetails_Load);
             this.DoubleClick += new System.EventHandler(this.FormDetails_DoubleClick);
             this.panel1.ResumeLayout(false);
@@ -190,14 +245,17 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxPhoto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelCreditCard;
+        private System.Windows.Forms.Label labelPhone;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelBirthday;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelSurname;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.Label labelAuthorization;
+        private System.Windows.Forms.RadioButton radioButtonCustomer;
+        private System.Windows.Forms.RadioButton radioButtonAdmin;
     }
 }

@@ -28,60 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResetPassword));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelNewPassword = new System.Windows.Forms.Label();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.buttonResetPassword = new System.Windows.Forms.Button();
             this.textBoxRePassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonResetPassword = new System.Windows.Forms.Button();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelNewPassword = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.textBoxRePassword);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.buttonResetPassword);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.labelNewPassword);
-            this.groupBox1.Location = new System.Drawing.Point(55, 59);
+            this.groupBox1.Location = new System.Drawing.Point(40, 39);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Size = new System.Drawing.Size(374, 227);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // labelNewPassword
-            // 
-            this.labelNewPassword.AutoSize = true;
-            this.labelNewPassword.Location = new System.Drawing.Point(62, 53);
-            this.labelNewPassword.Name = "labelNewPassword";
-            this.labelNewPassword.Size = new System.Drawing.Size(119, 20);
-            this.labelNewPassword.TabIndex = 0;
-            this.labelNewPassword.Text = "Yeni Parola Girin:";
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Location = new System.Drawing.Point(187, 50);
-            this.textBoxPassword.MaxLength = 20;
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(155, 27);
-            this.textBoxPassword.TabIndex = 1;
-            // 
-            // buttonResetPassword
-            // 
-            this.buttonResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.buttonResetPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonResetPassword.Location = new System.Drawing.Point(30, 156);
-            this.buttonResetPassword.Name = "buttonResetPassword";
-            this.buttonResetPassword.Size = new System.Drawing.Size(312, 43);
-            this.buttonResetPassword.TabIndex = 3;
-            this.buttonResetPassword.Text = "Parolayı Sıfırla";
-            this.buttonResetPassword.UseVisualStyleBackColor = false;
-            this.buttonResetPassword.Click += new System.EventHandler(this.buttonResetPassword_Click);
             // 
             // textBoxRePassword
             // 
@@ -101,17 +72,49 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Parolanızı Tekrar Girin:";
             // 
+            // buttonResetPassword
+            // 
+            this.buttonResetPassword.BackColor = System.Drawing.Color.Aqua;
+            this.buttonResetPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonResetPassword.Location = new System.Drawing.Point(30, 156);
+            this.buttonResetPassword.Name = "buttonResetPassword";
+            this.buttonResetPassword.Size = new System.Drawing.Size(312, 43);
+            this.buttonResetPassword.TabIndex = 3;
+            this.buttonResetPassword.Text = "Parolayı Sıfırla";
+            this.buttonResetPassword.UseVisualStyleBackColor = false;
+            this.buttonResetPassword.Click += new System.EventHandler(this.buttonResetPassword_Click);
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(187, 50);
+            this.textBoxPassword.MaxLength = 20;
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(155, 27);
+            this.textBoxPassword.TabIndex = 1;
+            // 
+            // labelNewPassword
+            // 
+            this.labelNewPassword.AutoSize = true;
+            this.labelNewPassword.Location = new System.Drawing.Point(62, 53);
+            this.labelNewPassword.Name = "labelNewPassword";
+            this.labelNewPassword.Size = new System.Drawing.Size(119, 20);
+            this.labelNewPassword.TabIndex = 0;
+            this.labelNewPassword.Text = "Yeni Parola Girin:";
+            // 
             // FormResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(471, 326);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(460, 306);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormResetPassword";
-            this.Text = "FormResetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Parola Sıfırla";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

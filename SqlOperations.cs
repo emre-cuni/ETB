@@ -17,7 +17,7 @@ namespace etb
         SqlCommand cmd;
         public DataSet dataSet = new DataSet();
         SqlDataAdapter sqlDataAdapter;
-        public Dictionary<string, string> customer = new Dictionary<string, string>();
+        public Dictionary<string, Tuple<string, bool>> customer = new Dictionary<string, Tuple<string, bool>>();
 
 
         public bool SqlConn() // veritabanı bağlantısını açan metot
@@ -63,7 +63,7 @@ namespace etb
                 cmd = new SqlCommand(query, conn);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
-                    customer.Add(reader.GetString(3), reader.GetString(4));
+                    customer.Add(reader.GetString(3), Tuple.Create(reader.GetString(4), reader.GetBoolean(6))); // veritabanındaki mail, parola ve yetki sütunları customer dictionary'sine eklenir
 
                 cmd.Dispose();
                 cmd = null;
@@ -81,7 +81,7 @@ namespace etb
             }
         }
 
-        public bool WriteCustomer(string query) // veritabanına kayıt ekleyen metot
+        public bool AddOrUpdate(string query) // veritabanına kayıt ekleyen veya mevcut kaydı güncelleyen metot
         {
             try
             {
@@ -90,34 +90,15 @@ namespace etb
                 cmd.Dispose();
                 cmd = null;
                 conn.Close();
-                return true;
+                return true; // işlem başarılı olursa true değerini döndürür
             }
             catch (Exception ex)
             {
                 cmd.Dispose();
                 cmd = null;
                 conn.Close();
-                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace + " Olay Zamanı: " + DateTime.Now, "SQL Write Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
-
-        public bool ResetPassword(string query) // parolayı sıfırlayan metot
-        {
-            try
-            {
-                cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-                cmd = null;
-                conn.Close();
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace, "Reset Password Error");
-                return false;
+                MessageBox.Show("ex.message: " + ex.Message + " stacktrace: " + ex.StackTrace + " Olay Zamanı: " + DateTime.Now, "SQL Add Or Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // işlem başarısız olursa false değerini döndürür
             }
         }
     }

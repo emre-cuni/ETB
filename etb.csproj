@@ -76,6 +76,12 @@
     <Compile Include="FormResetPassword.Designer.cs">
       <DependentUpon>FormResetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerifyCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerifyCode.Designer.cs">
+      <DependentUpon>FormVerifyCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlOperations.cs" />
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormResetPassword.resx">
       <DependentUpon>FormResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerifyCode.resx">
+      <DependentUpon>FormVerifyCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,9 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="To Do List.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
